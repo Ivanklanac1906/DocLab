@@ -41,19 +41,22 @@ const toggleNav = function() {
 addEventOnElements(navTogglers, "click", toggleNav);
 
 /**
- * HEADER
+ * HEADER & BACK TO TOP BTN
  * 
- * active header when window scroll to 100px
+ * active header & back top btn when window scroll to 100px
  */
 
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 const activeElementOnScroll = function () {
     if (window.scrollY > 100){
         header.classList.add("active"); 
+        backTopBtn.classList.add("active"); 
     }
     else{
         header.classList.remove("active");
+        backTopBtn.classList.remove("active");
     }
 }
 
